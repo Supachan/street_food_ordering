@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Ordering Food web app</title>
+        <link rel="stylesheet" href="stlyes_sub_menu.css">
+        <!-- <link rel="stylesheet" href="style_css_menu1.css"> -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .button_sum {
+                background-image: url('images/tts.png'); 
+                background-size: cover; 
+                width: 200px; 
+                height: 200px; 
+                font-size: 1.5rem; 
+                display: flex;
+                align-self: flex-end;
+                align-items: flex-end;
+                text-align: center;
+                cursor: pointer;
+                background-color: white; 
+                color: #04AA6D; 
+                border: 2px solid #04AA6D;
+                border-radius: 10px;
+            }
+
+            .button_sum:hover {
+                background-color: #04AA6D;
+                color: white;
+                border: 2px solid #ffffff;
+            } 
+
+
+
+            div.container {
+                /* display: grid; */
+                display: flex;
+                justify-content: space-between;
+                /* grid-template-columns: 1fr  1fr 1fr ; */
+                grid-template-columns: auto auto auto;
+                grid-gap: 10px;
+                max-height: 250px;
+                max-width:  95%;
+                font-size: 30px;
+                /* text-align: center; */
+                border-radius: 10px;
+                border: 1px solid black;
+                background-color: rgb(110, 170, 250);
+                padding: 10px 10px;
+                margin: 0 5% 0 5%;
+                margin-bottom: 10px;
+            }
+
+            div.container > div.one-column{
+                text-align: left;
+                padding: 0 0;
+                width: 100%;
+            }
+            div.container1 {
+                /* display: grid; */
+                display: flex;
+                justify-content: space-between;
+                /* grid-template-columns: 1fr  1fr 1fr ; */
+                /* grid-template-columns: auto auto auto; */
+                grid-gap: 10px;
+                max-height: 250px;
+                max-width:  95%;
+                /* text-align: center; */
+                border-radius: 10px;
+                border: 1px solid black;
+                background-color: rgb(110, 170, 250);
+                padding: 10px 10px;
+                margin: 0 5% 0 5%;
+                margin-bottom: 10px;
+            }
+            .media{
+                border: solid 2px rgb(195, 255, 0);
+                opacity: 100%;
+                }
+            img.media {
+                width: 250px;
+                height: 200px;
+            }
+            video.media {
+                width: 250px;
+                height: 200px;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            
+            h2 {
+                text-align: center;
+                color: rgb(52, 16, 197);
+                position:relative; 
+                top:2px; 
+                background-color:rgb(255, 0, 162);
+            }
+            h3 {
+                text-align: left;
+                color: rgb(52, 16, 197);
+                position:relative; 
+                top:2px; 
+                /* background-color:rgb(255, 0, 162); */
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">หน้าหลัก</a></li>
+                    <li><a href="menu.html">รายการอาหาร</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <h1 class="heading_2">เมนูข้าว</h1>
+        <!-- step 2 -->
+        <!-- create three columns in DIV -->
+        <div id="checkboxContainer_items">
+            <!-- Checkboxes will be generated and inserted here -->
+        </div>
+
+        <div id="checkboxContainer1">
+            <!-- Checkboxes will be generated and inserted here -->
+        </div>
+        <div id="checkboxContainer2">
+            <!-- Checkboxes will be generated and inserted here -->
+        </div>
+        <div id="checkboxContainer3">
+            <!-- Checkboxes will be generated and inserted here -->
+        </div>
+        <!-- <div class="column" id="imageContainer3"></div>
+        <div class="column" id="videoContainer3"></div> -->
+        <div id="checkboxContainer4">
+            <!-- Checkboxes will be generated and inserted here -->
+        </div>
+
+        <!-- <div class="column" id="imageContainer4"></div>
+        <div class="column" id="videoContainer4"></div> -->
+        
+        <hr style="border-style: dotted" >
+        <h2>สรุปรายการที่คุณเลือก</h2>
+        <div class = "container1">
+            
+            <div>
+                <h3 id="content"></h3>
+                <h3 id="sum_content"></h3>
+                <!-- Checkboxes will be generated and inserted here -->
+            </div>
+            <div >
+                <button onclick="transcribeSelectedValues()" class="button_sum">ข้อความเสียง</button>
+            </div>
+        </div>
+        <!-- <hr style="border-style: dotted" > -->
+        <!-- <div id="Button">
+            <button onclick="text_to_speech()"  id="summaryButton" type="button" class="button_sum">ข้อความเสียง</button>
+        </div> -->
+
+        <script src="js_rice.js"></script>
+    </body>
+</html>

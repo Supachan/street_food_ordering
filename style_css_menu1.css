@@ -1,0 +1,150 @@
+/* container */
+.three-columns {
+    display:flex;
+}
+
+/* columns */
+.three-columns > * {
+    width:calc(100% / 3);
+    padding:1rem;
+}
+
+.three-columns img{
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  border: solid 2px rgb(34, 0, 255);
+}
+
+.three-columns .image_menu{
+    background-size:cover;
+    background-repeat:no-repeat;
+    video{
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        border: solid 2px rgb(33, 157, 151);
+    }
+}
+
+.print {
+  display:inline;
+}
+.summary {
+  display: flex;
+  width:calc(100% / 2);
+  padding: 2rem;
+}
+
+.summary img{
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  border: solid 2px rgb(34, 0, 255);
+}
+
+.summary .video{
+    background-size:cover;
+    background-repeat:no-repeat;
+    video{
+        opacity: 100%;
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        border: solid 2px rgb(33, 157, 151);
+    }
+}
+
+
+body {
+    background: rgb(243, 255, 137);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    header {
+        background-color: palevioletred;
+        background-position: center;
+        height: 85px;
+        top: 0;
+        width: 100%;
+        position: fixed;
+        text-align: center;
+        padding: 20px 0px;
+        opacity: 1;        
+      }
+    header h1 {
+        background-color: rgb(178, 179, 255);
+        padding: 4px;
+        opacity: 0.9;  
+      }
+    
+    header a {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        padding: 15px;
+        font-size: 20px;
+        display: block;
+        text-decoration: none;
+        width: 150px;
+        margin-top: 10px;
+        opacity: 0.9;  
+        line-height: 20px;
+      }
+
+      header .mobile {
+        display: none;
+      }
+  
+      /* RESPONSIVE RULES */
+      @media screen and (max-width: 715px) {
+        .features {
+            display: block;
+        }
+      }
+
+      nav ul {
+          margin: 0;
+          padding: 2px;
+          list-style-type: none;
+      }
+      nav li {
+          display: inline-block;
+          margin-right: 20px;
+      }
+    
+    }
+.button_right {
+      position: fixed; /* or absolute */
+      right: 0;
+      bottom: 0;
+      height: 45px;
+      width: 45px;
+}
+.button_left {
+  position: fixed; /* or absolute */
+  left: 0;
+  bottom: 0;
+  height: 45px;
+  width: 45px;
+}
+
+form {
+  margin-top:170px;
+}
+
+legend {
+  font-size: 25px;
+}
+    
+label {
+  font-size: 20px;
+}
+
+input[type=checkbox] {
+	transform: scale(3);
+	margin: 0 20px 0 0;
+  /* overflow: hidden;
+  display: inline; */
+}

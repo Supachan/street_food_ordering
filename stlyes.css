@@ -1,0 +1,127 @@
+.heading-1{
+  /* font-size: 100%!important; */
+  color: blue;
+}
+
+body {
+    background: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.938);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*Header*/
+    header {
+      background-color: palevioletred;
+      background-position: center;
+      height: 100%;
+      text-align: center;
+      padding: 20px 20px;
+      padding: 10px 20px;
+    }
+
+    header a {
+      background-color: white;
+      padding: 10px;
+      font-size:large;
+      color: black ;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-top: 40px;
+    }
+
+    header .mobile {
+      display: none;
+    }
+
+    /* RESPONSIVE RULES */
+    @media screen and (max-width: 1500px) {
+      header {
+        height: 190px;
+        background-position: 0 -30px;
+      } 
+      header .mobile {
+        display: inline-block;
+      }
+      header .desktop {
+        display: none;
+      }
+    }     
+    @media screen and (max-width: 860px) {
+      header {
+        height: 220px;
+        background-position: 0 -0px;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      header {
+        height: 260px;
+        background-position: 0 -0px;
+      }
+    }
+    /* RESPONSIVE RULES */
+    @media screen and (max-width: 715px) {
+      .features {
+          display: block;
+      }
+    }
+    nav ul {
+      margin: 0;
+      padding: 2px;
+      list-style-type: none;
+    }
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+}
+
+.menu {
+  display:block; 
+  width:100%;
+  /* border: 5px solid rgb(32, 18, 230); */
+}
+
+
+.features {
+  max-width: 300;
+  max-height: 300;
+  float: center;
+  /* max-width: 100%;
+  max-height: 100%; */
+  width: 50%;
+  height: 50%;
+  border: 5px solid rgb(230, 117, 18);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features img {
+  max-width: 100%;
+  float: center;
+  max-height: 100%;
+  width: 100%;
+
+  object-fit: contain;
+}
+
+.method {
+ text-align: center; 
+ color: black; 
+}
+
+.method_img video{
+  width: auto;
+  height: 400px;
+}
+
+
+
+/*Footer*/
+footer {
+    background-color: black;
+    color: grey;
+    font-size: 12px;
+    padding: 20px 20px;
+    padding: 10px 20px;
+    text-align: center;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<htmal>
+    <head>
+        <title>Menu Ordering Food web app</title>
+        <link rel="stylesheet" href="style_menu.css">
+    </head>
+    <body>
+        <!-- Navigator -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">หน้าหลัก</a></li>
+                    <li><a href="menu.html">รายการอาหาร</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Food Division -->
+        <div class="flex">
+
+            <div class="item"> <h3>ก๋วยเตี๋ยว</h3>
+                <div class="menu">
+                    <div class="sub-menu">
+                        <!-- <a href="menu1_p1.html"> -->
+                        <img src="images/menu1.png" alt="noodle" onclick="redirectToPage_noodle()">
+                        <!-- </a> -->
+                    </div>
+
+                    <div class="sub-menu">
+                        <video controls poster="images/sign.jpg" src="video/ก๋วยเตี๋ยว1.mp4" alt="sign_ก๋วยเตี๋ยว" type="video/mp4"></video>
+                    </div>
+                </div>
+            </div>
+            <div class="item"><h3>เมนูข้าว</h3>
+                <div class="menu">
+                    <div class="sub-menu">
+                        <!-- <a href="menu2.html"> -->
+                            <img src="images/menu2.png" alt="ข้าว" onclick="redirectToPage_rice()">
+                        <!-- </a> -->
+                    </div>
+
+                    <div class="sub-menu">
+                        <video controls poster="images/sign.jpg" src="video/ข้าว1.mp4" alt="sign_เมนูข้าว" type="video/mp4"></video>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item"><h3>ส้มตำ</h3>
+                <div class="menu">
+                    <div class="sub-menu">
+                        <!-- <a href="menu3.html"> -->
+                            <img src="images/menu3.png" alt="ส้มตำ" onclick="redirectToPage_somtum()">
+                        <!-- </a> -->
+                    </div>
+                    
+                    <div class="sub-menu">
+                        <video controls poster="images/sign.jpg" src="video/ส้มตำ1.mp4" alt="sign_ส้มตำ" type="video/mp4"></video>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    <script>
+        // Function to redirect to another HTML page
+        function redirectToPage_noodle() {
+            // Set the location to the URL of the desired HTML page
+            window.location.href = 'noodle.html';
+        }
+        // Function to redirect to another HTML page
+        function redirectToPage_rice() {
+            // Set the location to the URL of the desired HTML page
+            window.location.href = 'rice.html';
+        }
+        // Function to redirect to another HTML page
+        function redirectToPage_somtum() {
+            // Set the location to the URL of the desired HTML page
+            window.location.href = 'somtum.html';
+        }
+    </script>
+    </body>  
+    
+    <footer>contact : 555-555-555 | us@.com</footer>
+</htmal>
