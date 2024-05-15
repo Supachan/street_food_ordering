@@ -36,38 +36,38 @@ function createCheckboxes_rice_meat(SubMenu, option) {
     const checkboxData = {
         ข้าวผัดกะเพรา: [
             create_keys_values('หมูสับ',radio_checkbox_name),
+            create_keys_values('หมูชิ้น',radio_checkbox_name),
             create_keys_values('เนื้อสับ',radio_checkbox_name),
             create_keys_values('กุ้ง',radio_checkbox_name),
             create_keys_values('ปลาหมึก',radio_checkbox_name),
-            create_keys_values('หมูชิ้น',radio_checkbox_name)
         ],
         ข้าวผัดพริกแกง: [
             create_keys_values('หมูสับ',radio_checkbox_name),
+            create_keys_values('หมูชิ้น',radio_checkbox_name),
             create_keys_values('เนื้อสับ',radio_checkbox_name),
             create_keys_values('กุ้ง',radio_checkbox_name),
             create_keys_values('ปลาหมึก',radio_checkbox_name),
-            create_keys_values('หมูชิ้น',radio_checkbox_name)
         ],
         ข้าวผัดกระเทียม: [
             create_keys_values('หมูสับ',radio_checkbox_name),
+            create_keys_values('หมูชิ้น',radio_checkbox_name),
             create_keys_values('เนื้อสับ',radio_checkbox_name),
             create_keys_values('กุ้ง',radio_checkbox_name),
             create_keys_values('ปลาหมึก',radio_checkbox_name),
-            create_keys_values('หมูชิ้น',radio_checkbox_name)
         ],
         ข้าวผัด: [
             create_keys_values('หมูสับ',radio_checkbox_name),
+            create_keys_values('หมูชิ้น',radio_checkbox_name),
             // create_keys_values('เนื้อสับ',radio_checkbox_name),
             create_keys_values('กุ้ง',radio_checkbox_name),
             // create_keys_values('ปลาหมึก',radio_checkbox_name),
-            create_keys_values('หมูชิ้น',radio_checkbox_name)
         ],
         ข้าวผัดผักรวม: [
             // create_keys_values('หมูสับ',radio_checkbox_name),
             // create_keys_values('เนื้อสับ',radio_checkbox_name),
-            // create_keys_values('กุ้ง',radio_checkbox_name),
+            create_keys_values('หมูชิ้น',radio_checkbox_name),
+            create_keys_values('กุ้ง',radio_checkbox_name),
             // create_keys_values('ปลาหมึก',radio_checkbox_name),
-            // create_keys_values('หมูชิ้น',radio_checkbox_name),
             create_keys_values('ไม่ใส่เนื้อสัตว์',radio_checkbox_name),
         ],
     };

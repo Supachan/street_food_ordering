@@ -85,35 +85,35 @@ function createCheckboxes_somtum_no(SubMenu, option) {
     const radio_checkbox_name = 'checkboxGroup'
     const checkboxData = {
         ส้มตำปู: [
-            create_keys_values('ผงชูรส',radio_checkbox_name),
-            create_keys_values('ปู',radio_checkbox_name),
-            // create_keys_values('กุ้งแห้ง',radio_checkbox_name),
+            create_keys_values('ไม่ใส่ผงชูรส',radio_checkbox_name),
+            create_keys_values('ไม่ใส่ปู',radio_checkbox_name),
+            // create_keys_values('ไม่ใส่กุ้งแห้ง',radio_checkbox_name),
         ],
         ส้มตำไทย: [
-            create_keys_values('ผงชูรส',radio_checkbox_name),
-            // create_keys_values('ปู',radio_checkbox_name),
-            create_keys_values('กุ้งแห้ง',radio_checkbox_name),
+            create_keys_values('ไม่ใส่ผงชูรส',radio_checkbox_name),
+            // create_keys_values('ไม่ใส่ปู',radio_checkbox_name),
+            create_keys_values('ไม่ใส่กุ้งแห้ง',radio_checkbox_name),
         ],
         ส้มตำถั่วฝักยาว: [
-            create_keys_values('ผงชูรส',radio_checkbox_name),
-            // create_keys_values('ปู',radio_checkbox_name),
-            create_keys_values('กุ้งแห้ง',radio_checkbox_name),
+            create_keys_values('ไม่ใส่ผงชูรส',radio_checkbox_name),
+            // create_keys_values('ไม่ใส่ปู',radio_checkbox_name),
+            create_keys_values('ไม่ใส่กุ้งแห้ง',radio_checkbox_name),
         ],
         ส้มตำข้าวโพด: [
-            create_keys_values('ผงชูรส',radio_checkbox_name),
-            // create_keys_values('ปู',radio_checkbox_name),
-            create_keys_values('กุ้งแห้ง',radio_checkbox_name),
+            create_keys_values('ไม่ใส่ผงชูรส',radio_checkbox_name),
+            // create_keys_values('ไม่ใส่ปู',radio_checkbox_name),
+            create_keys_values('ไม่ใส่กุ้งแห้ง',radio_checkbox_name),
         ],
         ส้มตำซั่ว: [
-            create_keys_values('ผงชูรส',radio_checkbox_name),
-            create_keys_values('ปู',radio_checkbox_name),
-            // create_keys_values('กุ้งแห้ง',radio_checkbox_name),
+            create_keys_values('ไม่ใส่ผงชูรส',radio_checkbox_name),
+            create_keys_values('ไม่ใส่ปู',radio_checkbox_name),
+            // create_keys_values('ไม่ใส่กุ้งแห้ง',radio_checkbox_name),
         ],
     };
 
     const selectedCheckboxData = checkboxData[option];
     selectedCheckboxData.forEach(item => {
-        const text     = 'ไม่ใส่'+item['id'];
+        const text     = item['id'];
         const imageSrc = item['imageSrc'];
         const videoSrc = item['videoSrc'];
         divWithColumns = createDivWithFileColumns_checkboxes(text, imageSrc, videoSrc, radio_checkbox_name)
@@ -289,7 +289,6 @@ function createRadioButtons_somtum() { // step 2
     
     return selectedValue;
 }
-
 
 function createDivWithFileColumns_radio_btn(text, imageSrc, videoSrc, radio_checkbox_name) {
     // Create a container div
