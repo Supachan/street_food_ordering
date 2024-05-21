@@ -1,11 +1,12 @@
 function generateContent() {
 
     const displayArea = document.getElementById('sum_content');
-    displayArea.innerHTML = ''; // Clear previous content
+    displayArea.innerHTML = 'รายการที่ใส่ คือ: '; // Clear previous content
     
     // Display checked radio buttons
     document.querySelectorAll('input[name="radioGroup_items"]:checked').forEach(function(radio) {
-        displayArea.innerHTML += 'รายการที่ใส่ คือ: ' + radio.value + ', ';
+        displayArea.innerHTML += radio.value + ', ';
+        // displayArea.innerHTML += 'รายการที่ใส่ คือ: ' + radio.value + ', ';
     });
     
     // Display checked checkboxes
@@ -30,9 +31,11 @@ function create_keys_values(item,radio_checkbox_name) {
 // SubMenu = ประเภทเส้น
 function createCheckboxes_noodle(SubMenu, option) {
     const container = document.getElementById('checkboxContainer1');
-    container.innerHTML = `<h2>${SubMenu}</h2>`;
-    container.appendChild(document.createElement('br'));
+    // container.innerHTML = `<h2>${SubMenu}</h2>`;
+    // container.appendChild(document.createElement('br'));
+    container.innerHTML = '';
     const radio_checkbox_name = 'radioGroup_items'
+
     const checkboxData = {
         น้ำใส: [
             create_keys_values('เส้นเล็ก',radio_checkbox_name),
@@ -91,13 +94,15 @@ function createCheckboxes_noodle(SubMenu, option) {
         divWithColumns = createDivWithFileColumns_radio_btn(text, imageSrc, videoSrc,radio_checkbox_name)
         container.appendChild(divWithColumns);
     });
+    accordion1()
 }
 
 // SubMenu = ประเภทเนื้อ
 function createCheckboxes_meat(SubMenu, option) {
     const container = document.getElementById('checkboxContainer2');
-    container.innerHTML = `<h2>${SubMenu}</h2>`;
-    container.appendChild(document.createElement('br'));
+    // container.innerHTML = `<h2>${SubMenu}</h2>`;
+    // container.appendChild(document.createElement('br'));
+    container.innerHTML = '';
     const radio_checkbox_name = 'checkboxGroup'
     const checkboxData = {
         น้ำใส: [
@@ -166,8 +171,9 @@ function createCheckboxes_meat(SubMenu, option) {
 // SubMenu = ประเภทลูกชิ้น
 function createCheckboxes_ball(SubMenu, option) {
     const container = document.getElementById('checkboxContainer3');
-    container.innerHTML = `<h2>${SubMenu}</h2>`;
-    container.appendChild(document.createElement('br'));
+    // container.innerHTML = `<h2>${SubMenu}</h2>`;
+    // container.appendChild(document.createElement('br'));
+    container.innerHTML = '';
     const radio_checkbox_name = 'checkboxGroup'
     const checkboxData = {
         น้ำใส: [
@@ -230,8 +236,9 @@ function createCheckboxes_ball(SubMenu, option) {
 // Submenu = รายการที่ ไม่ต้องการใส่
 function createCheckboxes_no_items_need(SubMenu, option) {
     const container = document.getElementById('checkboxContainer4');
-    container.innerHTML = `<h2>${SubMenu}</h2>`;
-    container.appendChild(document.createElement('br'));
+    // container.innerHTML = `<h2>${SubMenu}</h2>`;
+    // container.appendChild(document.createElement('br'));
+    container.innerHTML = '';
     const radio_checkbox_name = 'checkboxGroup'
     const checkboxData = {
         น้ำใส: [
@@ -256,7 +263,7 @@ function createCheckboxes_no_items_need(SubMenu, option) {
             create_keys_values('ไม่ใส่ถั่วงอก',radio_checkbox_name),
             create_keys_values('ไม่ใส่ผัก',radio_checkbox_name),
             // create_keys_values('เต้าหู้',radio_checkbox_name),
-            create_keys_values('เครื่องใน',radio_checkbox_name),        
+            create_keys_values('ไม่ใส่เครื่องใน',radio_checkbox_name),        
         ],
         เย็นตาโฟ: [
             create_keys_values('ไม่ใส่ถั่วงอก',radio_checkbox_name),
@@ -344,6 +351,7 @@ function transcribeSelectedValues() {
 
     // Create a SpeechSynthesisUtterance object
     const utterance = new SpeechSynthesisUtterance(); // <<< Speech API
+    
     utterance.lang = 'th-TH'; // Set the language to Thai
 
     // Combine the selected values into a single string
@@ -355,7 +363,8 @@ function transcribeSelectedValues() {
     utterance.text = 'เราอยากได้ ก๋วยเตี๋ยว'+transcription_main + 'รายการที่ใส่ คือ: ' + transcription_item + transcription;
 
     // Speak the text
-    speechSynthesis.speak(utterance);
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
 }
 
 function navigateToPageNoodle(noodle_type) {
@@ -363,6 +372,35 @@ function navigateToPageNoodle(noodle_type) {
     createCheckboxes_meat('2 ประเภทเนื้อ',noodle_type)
     createCheckboxes_ball('3 ประเภทลูกชิ้น',noodle_type)
     createCheckboxes_no_items_need('4 รายการที่ไม่ต้องการใส่',noodle_type)
+    // accordion1()
+}
+
+function accordion() {
+    document.querySelectorAll('.accordion').forEach(function(accordion) {
+        accordion.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const panel = this.nextElementSibling;
+          if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+          } else {
+            panel.style.display = 'block';
+          }
+        });
+      });
+}
+
+function accordion1() {
+    document.querySelectorAll('.accordion1').forEach(function(accordion) {
+        accordion.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const panel = this.nextElementSibling;
+          if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+          } else {
+            panel.style.display = 'block';
+          }
+        });
+      });
 }
 
 //  main function
@@ -374,23 +412,22 @@ function createRadioButtons_noodles() { // step 2
     container.innerHTML = '';
 
     // Create and append radio buttons
-    for (let i = 0; i < items.length; i++) {
-        const item = create_keys_values(items[i],radio_checkbox_name);
-        const text     = item['id']
-        const imageSrc = item['imageSrc']
-        const videoSrc = item['videoSrc']
+    items.forEach(item=> {
+        const kvi      = create_keys_values(item,radio_checkbox_name);
+        const text     = kvi['id']
+        const imageSrc = kvi['imageSrc']
+        const videoSrc = kvi['videoSrc']
         // create three columns in DIV
         const divWithColumns = createDivWithFileColumns_radio_btn(text, imageSrc, videoSrc, radio_checkbox_name);
         container.appendChild(divWithColumns);
-    }
-
+    });
+    accordion()
     let selectedValue = null;
     container.addEventListener('change', function() {
         const selectedRadioButton = document.querySelector('input[name="radioGroup"]:checked');
         if (selectedRadioButton) {
             selectedValue = selectedRadioButton.value;
             console.log('Selected radio button:', selectedRadioButton.value);
-            
             navigateToPageNoodle(selectedValue)
             // display text
             document.getElementById('content').innerHTML = `เราอยากได้ ก๋วยเตี๋ยว${selectedValue}`;
@@ -402,6 +439,7 @@ function createRadioButtons_noodles() { // step 2
             selectedValue = null;
             console.log('No radio button selected.');
         }
+    
     });
     
     return selectedValue;
@@ -436,8 +474,8 @@ function createDivWithFileColumns_radio_btn(text, imageSrc, videoSrc, radio_chec
             
             const labelText = document.createTextNode(data.value);
             label.classList.add('label-radio-btn')
-            label.style.backgroundColor = 'red';
-            label.style.color = 'white';
+            // label.style.backgroundColor = 'red';
+            // label.style.color = 'white';
             label.appendChild(radioBtn);
             label.appendChild(labelText);
 
@@ -489,8 +527,8 @@ function createDivWithFileColumns_checkboxes(text, imageSrc, videoSrc, radio_che
             
             const labelText = document.createTextNode(data.value);
             label.classList.add('label-checkbox')
-            label.style.backgroundColor = 'yellow';
-            label.style.color = 'black';
+            // label.style.backgroundColor = 'yellow';
+            // label.style.color = 'black';
             label.appendChild(checkbox);
             label.appendChild(labelText);
 

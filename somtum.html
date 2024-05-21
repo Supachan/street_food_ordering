@@ -30,8 +30,6 @@
                 border: 2px solid #ffffff;
             } 
 
-
-
             div.container {
                 /* display: grid; */
                 display: flex;
@@ -90,14 +88,18 @@
                 display: table;
                 clear: both;
             }
-            
+            h1 {text-align: center;}
+
             h2 {
                 text-align: center;
-                color: rgb(52, 16, 197);
+                color: rgb(86, 0, 232);
                 position:relative; 
                 top:2px; 
-                background-color:rgb(255, 0, 162);
+                /* background-color:#eea5f9; */
+                border-radius: 10px;
             }
+
+
             h3 {
                 text-align: left;
                 color: rgb(52, 16, 197);
@@ -105,6 +107,106 @@
                 top:2px; 
                 /* background-color:rgb(255, 0, 162); */
             }
+
+            .accordion h2 {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+
+            /* Style the accordion button */
+            .accordion {
+                background-color: #eea5f9;
+                color: #444;
+                cursor: pointer;
+                padding: 0px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                transition: 0.4s;
+                border-radius: 20px;
+                margin-bottom: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .accordion1{
+                background-color: #eea5f9;
+                color: #444;
+                cursor: pointer;
+                padding: 0px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                transition: 0.4s;
+                border-radius: 20px;
+                margin-bottom: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* Add a background color to the button when it is active */
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+            /* Hide the panel by default */
+            .panel {
+                padding: 0 18px;
+                display: none;
+                width: 100%;
+                margin: 0 auto; /* Center the panel */
+                background-color: white;
+                overflow: hidden;
+                margin-bottom: 10px;
+            }
+
+            /* Style for each checkbox item */
+            .panel input {
+                margin-right: 10px;
+            }
+
+            .panel label {
+                display: block;
+                padding: 10px;
+            }
+
+            .panel label:hover {
+                background-color: #f1f1f1;
+            }
+            
+            /* Add a background color to the button when it is active */
+            .active, .accordion1:hover1{
+                background-color: #cccccc;
+            }
+
+            /* Hide the panel by default */
+            .panel1 {
+                padding: 0 18px;
+                display: none;
+                background-color: white;
+                overflow: hidden;
+            }
+
+            /* Style for each checkbox item */
+            .panel1 input {
+                margin-right: 10px;
+            }
+
+            .panel1 label {
+                display: block;
+                padding: 10px;
+            }
+
+            .panel1 label:hover1 {
+                background-color: #eea5f9;
+            }
+
         </style>
     </head>
     <body>
@@ -117,21 +219,29 @@
                 </ul>
             </nav>
         </header>
-        
+
         <h1 class="heading_2">ส้มตำ</h1>
         <!-- step 2 -->
         <!-- create three columns in DIV -->
-        <div id="checkboxContainer_items">
+        <button class="accordion">
+            <h2>1. เลือกประเภทส้มตำ</h2>
+        </button>
+        <div class="panel" id="checkboxContainer_items">
             <!-- Checkboxes will be generated and inserted here -->
         </div>
 
-        <div id="checkboxContainer1">
+        <button class="accordion1"><h2>2. เลือกวัตถุใส่ดิบเพิ่ม</h2></button>
+        <div class="panel1" id="checkboxContainer1">
             <!-- Checkboxes will be generated and inserted here -->
         </div>
-        <div id="checkboxContainer2">
+
+        <button class="accordion1"><h2>3. เลือกรายการที่ไม่ต้องการใส่</h2></button>
+        <div class="panel1" id="checkboxContainer2">
             <!-- Checkboxes will be generated and inserted here -->
         </div>
-        <div id="checkboxContainer3">
+
+        <button class="accordion1"><h2>4. เลือกระดับความเผ็ด</h2></button>
+        <div class="panel1" id="checkboxContainer3">
             <!-- Checkboxes will be generated and inserted here -->
         </div>
         <!-- <div class="column" id="imageContainer3"></div>

@@ -27,8 +27,8 @@ function create_keys_values(item,radio_checkbox_name) {
 // SubMenu = วัตถุใส่ดิบเพิ่ม
 function createCheckboxes_somtum_add(SubMenu, option) {
     const container = document.getElementById('checkboxContainer1');
-    container.innerHTML = `<h2>${SubMenu}</h2>`;
-    container.appendChild(document.createElement('br'));
+    // container.innerHTML = `<h2>${SubMenu}</h2>`;
+    // container.appendChild(document.createElement('br'));
     const radio_checkbox_name = 'checkboxGroup'
     const checkboxData = {
         ส้มตำปู: [
@@ -75,13 +75,14 @@ function createCheckboxes_somtum_add(SubMenu, option) {
         divWithColumns = createDivWithFileColumns_checkboxes(text, imageSrc, videoSrc, radio_checkbox_name)
         container.appendChild(divWithColumns);
     });
+    accordion1()
 }
 
 // SubMenu = รายการที่ไม่ต้องการใส่
 function createCheckboxes_somtum_no(SubMenu, option) {
     const container = document.getElementById('checkboxContainer2');
-    container.innerHTML = `<h2>${SubMenu}</h2>`;
-    container.appendChild(document.createElement('br'));
+    // container.innerHTML = `<h2>${SubMenu}</h2>`;
+    // container.appendChild(document.createElement('br'));
     const radio_checkbox_name = 'checkboxGroup'
     const checkboxData = {
         ส้มตำปู: [
@@ -123,8 +124,8 @@ function createCheckboxes_somtum_no(SubMenu, option) {
 // SubMenu = ระดับความเผ็ด
 function createCheckboxes_somtum_spicylevel(SubMenu, option) {
     const container = document.getElementById('checkboxContainer3');
-    container.innerHTML = `<h2>${SubMenu}</h2>`;
-    container.appendChild(document.createElement('br'));
+    // container.innerHTML = `<h2>${SubMenu}</h2>`;
+    // container.appendChild(document.createElement('br'));
     const radio_checkbox_name = 'radioGroup_items_spicy'
     const checkboxData = {
         ส้มตำปู: [
@@ -249,6 +250,34 @@ function navigateToPageSomtum(somtum_type) {
     createCheckboxes_somtum_spicylevel('3 ระดับความเผ็ด',somtum_type)
 }
 
+function accordion() {
+    document.querySelectorAll('.accordion').forEach(function(accordion) {
+        accordion.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const panel = this.nextElementSibling;
+          if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+          } else {
+            panel.style.display = 'block';
+          }
+        });
+      });
+}
+
+function accordion1() {
+    document.querySelectorAll('.accordion1').forEach(function(accordion) {
+        accordion.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const panel = this.nextElementSibling;
+          if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+          } else {
+            panel.style.display = 'block';
+          }
+        });
+      });
+}
+
 function createRadioButtons_somtum() { // step 2
     const items = Array('ส้มตำปู','ส้มตำไทย','ส้มตำถั่วฝักยาว','ส้มตำข้าวโพด','ส้มตำซั่ว')
     const container = document.getElementById('checkboxContainer_items');
@@ -266,7 +295,7 @@ function createRadioButtons_somtum() { // step 2
         const divWithColumns = createDivWithFileColumns_radio_btn(text, imageSrc, videoSrc, radio_checkbox_name);
         container.appendChild(divWithColumns);
     }
-
+    accordion()
     let selectedValue = null;
     container.addEventListener('change', function() {
         const selectedRadioButton = document.querySelector('input[name="radioGroup"]:checked');
@@ -318,8 +347,8 @@ function createDivWithFileColumns_radio_btn(text, imageSrc, videoSrc, radio_chec
             
             const labelText = document.createTextNode(data.value);
             label.classList.add('label-radio-btn')
-            label.style.backgroundColor = 'red';
-            label.style.color = 'white';
+            // label.style.backgroundColor = 'red';
+            // label.style.color = 'white';
             label.appendChild(radioBtn);
             label.appendChild(labelText);
 
@@ -371,8 +400,8 @@ function createDivWithFileColumns_checkboxes(text, imageSrc, videoSrc, radio_che
             
             const labelText = document.createTextNode(data.value);
             label.classList.add('label-checkbox')
-            label.style.backgroundColor = 'yellow';
-            label.style.color = 'black';
+            // label.style.backgroundColor = 'yellow';
+            // label.style.color = 'black';
             label.appendChild(checkbox);
             label.appendChild(labelText);
 
