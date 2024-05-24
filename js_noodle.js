@@ -338,6 +338,10 @@ function text_to_speech() {
     })
 }
 
+function hold(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
 function transcribeSelectedValues() {
     const selectedValues  = getSelectedValues('checkboxGroup');     // boxes checkboxGroup
     const selectedRadio   = getSelectedValues('radioGroup');        // radio btn
@@ -360,7 +364,7 @@ function transcribeSelectedValues() {
     const transcription_main = selectedRadio.join(', ');
 
     // Set the text to be spoken
-    utterance.text = 'เราอยากได้ ก๋วยเตี๋ยว'+transcription_main + 'รายการที่ใส่ คือ: ' + transcription_item + transcription;
+    // utterance.text = 'เราอยากได้ ก๋วยเตี๋ยว'+transcription_main + 'รายการที่ใส่ คือ: ' + transcription_item + transcription;
 
     // Speak the text
     window.speechSynthesis.cancel();

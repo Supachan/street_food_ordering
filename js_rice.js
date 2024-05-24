@@ -92,31 +92,31 @@ function createCheckboxes_rice_add(SubMenu, option) {
         ข้าวผัดกะเพรา: [
             create_keys_values('ไข่ดาวไม่สุก',radio_checkbox_name),
             create_keys_values('ไข่ดาวสุก',radio_checkbox_name),
-            create_keys_values('ไข่เจียวหมูสับ',radio_checkbox_name),
+            create_keys_values('ไข่เจียว',radio_checkbox_name),
             create_keys_values('ไข่ต้ม',radio_checkbox_name),
         ],
         ข้าวผัดพริกแกง: [
             create_keys_values('ไข่ดาวไม่สุก',radio_checkbox_name),
             create_keys_values('ไข่ดาวสุก',radio_checkbox_name),
-            create_keys_values('ไข่เจียวหมูสับ',radio_checkbox_name),
+            create_keys_values('ไข่เจียว',radio_checkbox_name),
             create_keys_values('ไข่ต้ม',radio_checkbox_name),
         ],
         ข้าวผัดกระเทียม: [
             create_keys_values('ไข่ดาวไม่สุก',radio_checkbox_name),
             create_keys_values('ไข่ดาวสุก',radio_checkbox_name),
-            create_keys_values('ไข่เจียวหมูสับ',radio_checkbox_name),
+            create_keys_values('ไข่เจียว',radio_checkbox_name),
             create_keys_values('ไข่ต้ม',radio_checkbox_name),
         ],
         ข้าวผัด: [
             create_keys_values('ไข่ดาวไม่สุก',radio_checkbox_name),
             create_keys_values('ไข่ดาวสุก',radio_checkbox_name),
-            create_keys_values('ไข่เจียวหมูสับ',radio_checkbox_name),
+            create_keys_values('ไข่เจียว',radio_checkbox_name),
             create_keys_values('ไข่ต้ม',radio_checkbox_name),
         ],
         ข้าวผัดผักรวม: [
             create_keys_values('ไข่ดาวไม่สุก',radio_checkbox_name),
             create_keys_values('ไข่ดาวสุก',radio_checkbox_name),
-            create_keys_values('ไข่เจียวหมูสับ',radio_checkbox_name),
+            create_keys_values('ไข่เจียว',radio_checkbox_name),
             create_keys_values('ไข่ต้ม',radio_checkbox_name),
         ],
     };
