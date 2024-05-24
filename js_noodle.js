@@ -307,40 +307,58 @@ function getSelectedValues(radio_checkbox_name) {
     return selectedValues;
 }
 
-// แสดง playlisted audios
-async function playAudio(audios,index) {
+async function playAudio(listArrays, audios, index, progressBar, totalAudios) {
     return new Promise(resolve => {
-      audios[index].play()
+      const statusDiv = document.getElementById('status');
+      statusDiv.innerHTML = `กำลังเล่นเสียง "${listArrays[index]}" ...`; // Update status
+
+      audios[index].play();
       audios[index].addEventListener('ended', () => {
-        console.log(`${index} ended`)
-        resolve()
-      })
-    })
+        console.log(`${index} ended`);
+        // Update progress bar
+        progressBar.value = ((index + 1) / totalAudios) * 100;
+        resolve();
+      });
+    });
   }
 
-function text_to_speech() {
-    const listArray  = getSelectedValues('checkboxGroup'); 
-    const listArray1 = getSelectedValues('radioGroup') 
+
+let isPlaying = false;
+async function text_to_speech() {
+    if (isPlaying) return;
+    isPlaying = true;
+
+    const listArray1 = getSelectedValues('radioGroup');
+    const listArray2 = getSelectedValues('radioGroup_items');
+    const listArray3 = getSelectedValues('checkboxGroup'); 
+
+    var listArrays = Array.prototype.concat.apply([], ['เราอยากได้',listArray1,'รายการที่ใส่คือ',listArray2,listArray3])
+    const LEN = listArrays.length;
+    console.log('listArrays = ', listArrays, 'LEN =', LEN);
+
+    const audios = [];
+    for (let i = 0; i < listArrays.length; i++) {
+      const audio = new Audio(`audio_files/${listArrays[i]}.mp3`);
+      audios.push(audio);
+    }
+
+    const progressBar = document.getElementById('progressBar');
+    progressBar.value = 0; // Reset progress bar
+
+    for (let k = 0; k < LEN; k++) {
+      await playAudio(listArrays, audios, k, progressBar, LEN);
+    }
+
+    const statusDiv = document.getElementById('status');
+    statusDiv.innerHTML = 'ข้อความเสียงเสร็จสิ้นแล้ว';
+
+    isPlaying = false;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('summaryButton');
-    button.addEventListener('click', async function () {
-        const audios = []
-        i = 0;
-        for (i==0;i<listArray.length;i++) {
-            const audio = new Audio(`audio_files/${listArray[i]}.mp3`);
-            audios.push(audio)
-        }
-
-        console.log(audios)
-        k = 0;
-        for (k==0;k<listArray.length;k++) {
-            await playAudio(audios,k)
-        }
-    })
-}
-
-function hold(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+    button.addEventListener('click', text_to_speech);
+  });
 
 function transcribeSelectedValues() {
     const selectedValues  = getSelectedValues('checkboxGroup');     // boxes checkboxGroup
@@ -510,8 +528,6 @@ function createDivWithFileColumns_checkboxes(text, imageSrc, videoSrc, radio_che
         { label: 'Image', value: imageSrc },
         { label: 'Video', value: videoSrc }
     ];
-    // const columns = document.createElement('div');
-    // columns.classList.add('three-columns');
 
     columnsData.forEach(data => {
         const column = document.createElement('div');
@@ -526,7 +542,7 @@ function createDivWithFileColumns_checkboxes(text, imageSrc, videoSrc, radio_che
             // checkbox.name = data.name;
             checkbox.name = radio_checkbox_name;
             checkbox.classList.add('checkbox')
-            checkbox.id = data.id;
+            checkbox.id = 'checkboxClass'+data.value;
             checkbox.value = data.value;
             
             const labelText = document.createTextNode(data.value);

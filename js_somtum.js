@@ -184,36 +184,59 @@ function getSelectedValues(radio_checkbox_name) {
     return selectedValues;
 }
 
-// แสดง playlisted audios
-async function playAudio(audios,index) {
+async function playAudio(listArrays, audios, index, progressBar, totalAudios) {
     return new Promise(resolve => {
-      audios[index].play()
+      const statusDiv = document.getElementById('status');
+    //   statusDiv.innerHTML = `กำลังเล่นเสียง "${listArrays[index]}" (คำที่${index + 1} จาก ${totalAudios}คำ) ...`; // Update status
+      statusDiv.innerHTML = `กำลังเล่นเสียง "${listArrays[index]}" ...`; // Update status
+
+      audios[index].play();
       audios[index].addEventListener('ended', () => {
-        console.log(`${index} ended`)
-        resolve()
-      })
-    })
+        console.log(`${index} ended`);
+        // Update progress bar
+        progressBar.value = ((index + 1) / totalAudios) * 100;
+        resolve();
+      });
+    });
   }
 
-function text_to_speech() {
-    const listArray  = getSelectedValues('checkboxGroup'); 
-    const listArray1 = getSelectedValues('radioGroup') 
-    const button = document.getElementById('summaryButton');
-    button.addEventListener('click', async function () {
-        const audios = []
-        i = 0;
-        for (i==0;i<listArray.length;i++) {
-            const audio = new Audio(`audio_files/${listArray[i]}.mp3`);
-            audios.push(audio)
-        }
 
-        console.log(audios)
-        k = 0;
-        for (k==0;k<listArray.length;k++) {
-            await playAudio(audios,k)
-        }
-    })
+let isPlaying = false;
+async function text_to_speech() {
+    if (isPlaying) return;
+    isPlaying = true;
+
+    const listArray1 = getSelectedValues('checkboxGroup'); 
+    const listArray2 = getSelectedValues('radioGroup') 
+    const listArray3 = getSelectedValues('radioGroup_items_spicy')
+    var listArrays = Array.prototype.concat.apply([], ['เราอยากได้',listArray2,'รายการที่ใส่คือ',listArray1,listArray3])
+    const LEN = listArrays.length;
+    console.log('listArrays = ', listArrays, 'LEN =', LEN);
+
+    const audios = [];
+    for (let i = 0; i < listArrays.length; i++) {
+    const audio = new Audio(`audio_files/${listArrays[i]}.mp3`);
+    audios.push(audio);
+    }
+
+    const progressBar = document.getElementById('progressBar');
+    progressBar.value = 0; // Reset progress bar
+
+    for (let k = 0; k < LEN; k++) {
+    await playAudio(listArrays, audios, k, progressBar, LEN);
+    }
+
+    const statusDiv = document.getElementById('status');
+    statusDiv.innerHTML = 'ข้อความเสียงเสร็จสิ้นแล้ว';
+
+    isPlaying = false;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('summaryButton');
+    button.addEventListener('click', text_to_speech);
+});
+
 
 function transcribeSelectedValues() {
     const selectedValues  = getSelectedValues('checkboxGroup');     // boxes checkboxGroup

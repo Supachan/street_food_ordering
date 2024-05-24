@@ -8,6 +8,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <style>
+            div#status{
+                text-align: center;
+                color: rgb(52, 16, 197);
+                position:relative; 
+                top:2px; 
+                font-size: 2vw;
+                /* background-color:#eea5f9; */
+                /* border-radius: 10px; */
+            
+            }
             .button_sum {
                 background-image: url('images/tts.png'); 
                 background-size: cover; 
@@ -235,7 +245,13 @@
             .panel1 label:hover1 {
                 background-color: #eea5f9;
             }
-
+            .center-container {
+                width: 90%;
+                margin: 0 auto; /* Center horizontally */
+            }
+            #progressBar {
+                width: 100%; /* Full width within the container */
+            }
         </style>
     </head>
     <body>
@@ -299,10 +315,12 @@
                 <button onclick="text_to_speech()"  id="summaryButton" type="button" class="button_sum">ข้อความเสียง</button>
             </div>
         </div>
-        <!-- <hr style="border-style: dotted" > -->
-        <!-- <div id="Button">
-            <button onclick="text_to_speech()"  id="summaryButton" type="button" class="button_sum">ข้อความเสียง</button>
-        </div> -->
+        <h1>แสดงสถานะการส่งข้อความเสียง</h1>
+        <div id="status" style="margin-top: 10px; font-size: 16px;"></div> <!-- Status div -->
+        <div class="center-container">
+          <progress id="progressBar" value="0" max="100" style="margin-top: 10px;"></progress> <!-- Progress bar -->
+        </div>
+        <hr style="border-style: dotted" >
 
         <script src="js_noodle.js"></script>
     </body>
