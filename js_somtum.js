@@ -1,17 +1,48 @@
 function generateContent() {
+    const listArray1 = getSelectedValues('radioGroup') 
+    const listArray2 = getSelectedValues('checkboxGroup'); 
+    const listArray3 = getSelectedValues('radioGroup_items_spicy')
+    const listArray4 = getSelectedValues('checkboxGroup_No'); 
 
     const displayArea = document.getElementById('sum_content');
-    displayArea.innerHTML = 'รายการที่ใส่ คือ: '; // Clear previous content
+    // displayArea.innerHTML = 'รายการที่ใส่ คือ: '; // Clear previous content
     
     // Display checked checkboxes
-    document.querySelectorAll('input[type="checkbox"]:checked').forEach(function(checkbox) {
-        displayArea.innerHTML += checkbox.value + ', ';
-    });
+    // document.querySelectorAll('input[type="checkbox"]:checked').forEach(function(checkbox) {
+    //     displayArea.innerHTML += checkbox.value + ', ';
+    // });
 
 
-    document.querySelectorAll('input[name="radioGroup_items_spicy"]:checked').forEach(function(radio) {
-        displayArea.innerHTML += radio.value + ', ';
-    });
+    // document.querySelectorAll('input[name="radioGroup_items_spicy"]:checked').forEach(function(radio) {
+    //     displayArea.innerHTML += radio.value + ', ';
+    // });
+
+
+    if ((listArray2.length+listArray3.length > 0)){
+        displayArea.innerHTML = 'รายการที่ใส่ คือ '; // Clear previous content
+
+        document.querySelectorAll('input[name="checkboxGroup"]:checked').forEach(function(checkbox) {
+            // console.log('checkbox.value Selected radio button:', checkbox.value);
+            displayArea.innerHTML += checkbox.value + ', ';
+        });
+        document.querySelectorAll('input[name="radioGroup_items_spicy"]:checked').forEach(function(radio) {
+            // console.log('radio.value Selected radio button:', radio.value);
+            displayArea.innerHTML += radio.value + ', ';
+        });
+        if (listArray4.length > 0){
+            displayArea.innerHTML += 'แต่ '
+            document.querySelectorAll('input[name="checkboxGroup_No"]:checked').forEach(function(checkbox) {
+                // console.log('checkbox.value Selected radio button:', checkbox.value);
+                displayArea.innerHTML += checkbox.value + ', ';
+            });
+        }
+    } else {
+        displayArea.innerHTML = 'แต่ ';
+        document.querySelectorAll('input[name="checkboxGroup_No"]:checked').forEach(function(checkbox) {
+            // console.log('checkbox.value Selected radio button:', checkbox.value);
+            displayArea.innerHTML += checkbox.value + ', ';
+        });
+    }
 }
 
 function create_keys_values(item,radio_checkbox_name) {
@@ -83,7 +114,7 @@ function createCheckboxes_somtum_no(SubMenu, option) {
     const container = document.getElementById('checkboxContainer2');
     // container.innerHTML = `<h2>${SubMenu}</h2>`;
     // container.appendChild(document.createElement('br'));
-    const radio_checkbox_name = 'checkboxGroup'
+    const radio_checkbox_name = 'checkboxGroup_No'
     const checkboxData = {
         ส้มตำปู: [
             create_keys_values('ไม่ใส่ผงชูรส',radio_checkbox_name),
@@ -206,10 +237,21 @@ async function text_to_speech() {
     if (isPlaying) return;
     isPlaying = true;
 
-    const listArray1 = getSelectedValues('checkboxGroup'); 
-    const listArray2 = getSelectedValues('radioGroup') 
+    
+    const listArray1 = getSelectedValues('radioGroup') 
+    const listArray2 = getSelectedValues('checkboxGroup'); 
     const listArray3 = getSelectedValues('radioGroup_items_spicy')
-    var listArrays = Array.prototype.concat.apply([], ['เราอยากได้',listArray2,'รายการที่ใส่คือ',listArray1,listArray3])
+    const listArray4 = getSelectedValues('checkboxGroup_No'); 
+    // var listArrays = Array.prototype.concat.apply([], ['เราอยากได้',listArray1,'รายการที่ใส่คือ',listArray2,listArray3])
+    if ((listArray2.length+listArray3.length+listArray4.length === 0)){
+        var listArrays = Array.prototype.concat.apply([], ['เราอยากได้',listArray1])
+    } else {
+        if (listArray2.length+listArray3.length > 0){
+            var listArrays = Array.prototype.concat.apply([], ['เราอยากได้',listArray1,'รายการที่ใส่คือ',listArray2,listArray3,'แต่',listArray4])
+        } else {
+            var listArrays = Array.prototype.concat.apply([], ['เราอยากได้',listArray1,'แต่',listArray4])
+        }
+        }
     const LEN = listArrays.length;
     console.log('listArrays = ', listArrays, 'LEN =', LEN);
 
@@ -418,7 +460,7 @@ function createDivWithFileColumns_checkboxes(text, imageSrc, videoSrc, radio_che
             // checkbox.name = data.name;
             checkbox.name = radio_checkbox_name;
             checkbox.classList.add('checkbox')
-            checkbox.id = data.id;
+            checkbox.id = 'checkboxClass'+data.value;
             checkbox.value = data.value;
             
             const labelText = document.createTextNode(data.value);

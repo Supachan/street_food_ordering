@@ -35,10 +35,10 @@ function createCheckboxes_rice_meat(SubMenu, option) {
     const radio_checkbox_name = 'checkboxGroup'
     const checkboxData = {
         ข้าวผัดกะเพรา: [
-            create_keys_values('หมูสับ',radio_checkbox_name),
-            create_keys_values('หมูชิ้น',radio_checkbox_name),
-            create_keys_values('เนื้อสับ',radio_checkbox_name),
-            create_keys_values('กุ้ง',radio_checkbox_name),
+            create_keys_values('หมูสับ', radio_checkbox_name),
+            create_keys_values('หมูชิ้น', radio_checkbox_name),
+            create_keys_values('เนื้อสับ', radio_checkbox_name),
+            create_keys_values('กุ้ง',    radio_checkbox_name),
             create_keys_values('ปลาหมึก',radio_checkbox_name),
         ],
         ข้าวผัดพริกแกง: [
@@ -68,7 +68,7 @@ function createCheckboxes_rice_meat(SubMenu, option) {
             create_keys_values('หมูชิ้น',radio_checkbox_name),
             create_keys_values('กุ้ง',radio_checkbox_name),
             // create_keys_values('ปลาหมึก',radio_checkbox_name),
-            create_keys_values('ไม่ใส่เนื้อสัตว์',radio_checkbox_name),
+            create_keys_values('ไม่ใส่เนื้อสัตว์',radio_checkbox_name)
         ],
     };
     const selectedCheckboxData = checkboxData[option];
@@ -130,6 +130,7 @@ function createCheckboxes_rice_add(SubMenu, option) {
         container.appendChild(divWithColumns);
     });
 }
+
 // SubMenu = ระดับความเผ็ด
 function createCheckboxes_rice_spicylevel(SubMenu, option) {
     const container = document.getElementById('checkboxContainer3');
@@ -207,7 +208,7 @@ async function playAudio(listArrays, audios, index, progressBar, totalAudios) {
         resolve();
       });
     });
-  }
+}
 
 
 let isPlaying = false;
@@ -220,7 +221,7 @@ async function text_to_speech() {
     const listArray3  = getSelectedValues('radioGroup_items_spicy');  // radio btn item
     const listArray4  = getSelectedValues('checkboxGroup');     // boxes checkboxGroup
 
-    var listArrays = Array.prototype.concat.apply([], ['เราอยากได้',listArray1,'รายการที่ใส่คือ',listArray2,listArray4,listArray3])
+    var listArrays = Array.prototype.concat.apply([], ['เราอยากได้',listArray1,'รายการที่ใส่คือ',listArray4,listArray2,listArray3])
     const LEN = listArrays.length
     console.log('listArrays = ', listArrays, 'LEN =', LEN);
 
@@ -430,7 +431,7 @@ function createDivWithFileColumns_checkboxes(text, imageSrc, videoSrc, radio_che
             // checkbox.name = data.name;
             checkbox.name = radio_checkbox_name;
             checkbox.classList.add('checkbox')
-            checkbox.id = data.id;
+            checkbox.id = 'checkboxClass'+data.value;
             checkbox.value = data.value;
             
             const labelText = document.createTextNode(data.value);
