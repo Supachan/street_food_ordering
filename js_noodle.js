@@ -182,7 +182,7 @@ function createCheckboxes_meat(SubMenu, option) {
             // create_keys_values('เนื้อหมู',radio_checkbox_name),
             // create_keys_values('เนื้อสด',radio_checkbox_name),
             // create_keys_values('เนื้อเปื่อย',radio_checkbox_name),
-            // create_keys_values('เนื้อปลา',radio_checkbox_name),
+            create_keys_values('เนื้อปลา',radio_checkbox_name),
             create_keys_values('ปลาหมึก',radio_checkbox_name),
             create_keys_values('กุ้ง',radio_checkbox_name),
             // create_keys_values('หมูกรอบ',radio_checkbox_name),
@@ -246,8 +246,8 @@ function createCheckboxes_ball(SubMenu, option) {
         เย็นตาโฟ: [
             // create_keys_values('ลูกชิ้นหมู',radio_checkbox_name),
             // create_keys_values('ลูกชิ้นเนื้อ',radio_checkbox_name),
-            // create_keys_values('ลูกชิ้นแคะ',radio_checkbox_name),
-            // create_keys_values('ลูกชิ้นปลา',radio_checkbox_name),
+            create_keys_values('ลูกชิ้นแคะ',radio_checkbox_name),
+            create_keys_values('ลูกชิ้นปลา',radio_checkbox_name),
             create_keys_values('ลูกชิ้นกุ้ง',radio_checkbox_name),
         ],
         // ก๋วยจั๊บ: [
