@@ -27,7 +27,10 @@ body {
     margin-top: 40px;
     max-height: 50px;
   }
-
+  h1 {text-align: center;
+    font-size: 2vw;}
+  /* h2 {text-align: left;
+      font-size: 1vw;} */
   /* header .mobile {
     display: none;
   }
