@@ -77,11 +77,11 @@ body {
 
 
 .features {
-  max-width: 300;
-  max-height: 300;
+  /* max-width: 300;
+  max-height: 300; */
   float: center;
-  /* max-width: 100%;
-  max-height: 100%; */
+  max-width: fit-content;
+  max-height: fit-content;
   width: 50%;
   height: 50%;
   border: 5px solid rgb(230, 117, 18);

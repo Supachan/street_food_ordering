@@ -70,14 +70,14 @@ function createCheckboxes_somtum_add(SubMenu, option) {
             create_keys_values('น้ำปลา',radio_checkbox_name),
         ],
         ส้มตำไทย: [
-            // create_keys_values('น้ำปลาร้า',radio_checkbox_name),
+            create_keys_values('น้ำปลาร้า',radio_checkbox_name),
             create_keys_values('ไข่เค็ม',radio_checkbox_name),
             // create_keys_values('ขนมจีน',radio_checkbox_name),
             create_keys_values('น้ำตาล',radio_checkbox_name),
             create_keys_values('น้ำปลา',radio_checkbox_name),
         ],
         ส้มตำถั่วฝักยาว: [
-            // create_keys_values('น้ำปลาร้า',radio_checkbox_name),
+            create_keys_values('น้ำปลาร้า',radio_checkbox_name),
             create_keys_values('ไข่เค็ม',radio_checkbox_name),
             // create_keys_values('ขนมจีน',radio_checkbox_name),
             create_keys_values('น้ำตาล',radio_checkbox_name),
