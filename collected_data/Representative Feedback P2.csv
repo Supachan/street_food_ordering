@@ -1,0 +1,28 @@
+﻿Theme,Subtheme,"Representative comments P2
+(Expert comments [D] / Observation logs [OL] / pilot comments [GPI])"
+1: SL Video Quality and Content Accuracy,,
+,1.1 Procedural Visual Representation ,"(D1) “Each step should be clearly demonstrated visually; however, the clip jumps directly to the fragment, limiting the visibility of intermediate steps.”"
+,1.2 Multimodal Layout Integration ,"(D2) “If the video size is reduced and displayed alongside images and text, it may be easier to understand.”"
+,1.2 Multimodal Layout Integration ,(D3) “Adjust the caption to a single line and recheck spelling.”
+,1.3 Caption Structure and Linguistic Accuracy ,(D4) “Reduce the video size so it can be displayed together with images and text.”
+,1.4 SL Lexical Accuracy ,(D5) “The SL for ‘rice menu’ and ‘som tam’ is still incorrect.”
+,1.5 Responsive Video Interaction and Control ,"(OL1) “The video is not responsive and lacks a close button, causing usability issues across different mobile devices.”"
+2: Visual Authenticity and Content Appropriateness,,
+,2.1 Menu Structure Clarity and Logical Consistency ,"(D6) “Users may be confused about whether they are required to select certain sub-items; for example, whether squid must be selected for Yentafo, even though squid is already an inherent component of the dish.”"
+,2.2 Menu Coverage and Representativeness ,(D7) “General made-to-order menu items should be reviewed and expanded to provide more comprehensive coverage.”
+3: Interaction Design and Navigation,,
+,3.1 Screen Orientation and Visibility ,"(D8) “When the mobile phone is held in landscape orientation, users may not be able to see the overall interface.”"
+,3.1 Screen Orientation and Visibility ,(D9) “Using the phone in landscape orientation prevents users from viewing the complete menu overview.”
+,3.2 Scrolling Efficiency ,"(OL2) “Scrolling through ingredients requires excessive vertical scrolling, which makes the interaction feel inconvenient.”"
+,3.3 Interaction Affordance Visibility ,(D10) “Users do not realize that they need to tap on images in the food categories to view details.”
+,3.3 Interaction Affordance Visibility ,"(D11) “The main menu page should clearly indicate that food category images are tappable, as users are unaware that more details are available. Thumbnails or symbols should be added to indicate that images can be tapped to access specific menu items.”"
+,3.3 Interaction Affordance Visibility ,"(D12) “Overall, the interface is easy to understand, but users may not know which menus are tappable or whether there are no further options.”"
+,3.4 Iconography and Visual Cues ,"(D13) “It is suggested to modify the button icon to display a handshape representing sign language with all five fingers, instead of only two fingers.”"
+,3.4 Iconography and Visual Cues ,(D14) “Additional iconography could be added to make the interface easier to understand for everyone.”
+,3.5 Functional Scope and Ordering Flexibility ,"(GPI1) “The menu page should include additional menu options; for example, allowing users to order multiple made-to-order dishes (e.g. pork fried rice and vegetable fried rice) from the same restaurant, rather than being limited to only two sets.” "
+4: Audio Interaction Support,,
+,4.1 Voice Naturalness and Intelligibility ,"(D15) “The summarized spoken message should use a real human voice, as it would be easier to understand.”"
+,4.2 Audio Playback Status Awareness ,"(OL3) “On the order summary page, users are unsure whether the audio has already been played and worry that hearing vendors may not have heard it.”"
+,4.2 Audio Playback Status Awareness ,"(GPI2) “On the summary page, a status indicator should be added to show whether the spoken audio has finished playing.”"
+,4.3 Audio Output Stability and Quality ,"(OL4) “Hearing researchers observed that the audio output was interrupted and had inconsistent tone, as evidenced by confused facial expressions and difficulty understanding among hearing vendors.”"
+,4.4 Cognitive Load Reduction for Deaf Users ,"(D16) “On the audio summary page, only the spoken audio should be presented; text such as ‘playing audio’ should be removed, as Deaf users tend to read all on-screen text, which may cause confusion.”"

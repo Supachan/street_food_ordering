@@ -1,0 +1,27 @@
+﻿Theme,Subtheme,Expert comments P1
+1: SL Video Quality and Content Accuracy,,
+,1.1 Lighting and Visual Clarity,(C1) “The presenter’s face in some videos appears overly bright.”
+,1.1 Lighting and Visual Clarity,(C2) “The lighting in the video is inconsistent.”
+,1.2 Sign Language Linguistic Accuracy,(C3) “The accuracy of the sign language usage should be reviewed.”
+,1.3 Caption Accuracy and Readability ,(C4) “The captions should be proofread again.”
+,1.4 Expressiveness and Non-manual Signals,"(C5) “The video should be adjusted to appear more friendly and lively, with slightly increased facial expressions.”"
+,1.5 Video Display Size and Framing ,(C6) “The video display area may be too small for mobile screens.”
+,1.5 Video Display Size and Framing ,(C7) “The video should be tested in full-screen mode or displayed within a larger frame.”
+,1.6 Video Format and Platform Suitability ,(C8) “Consider using YouTube or a more appropriate MP4 format.”
+2: Visual Authenticity and Content Appropriateness,,
+,2.1 Food Image Specificity and Semantic Clarity ,"(C9) “Adjust the image of each food item to convey its meaning clearly (e.g. braised beef, pork) by using an image of only that specific dish.”"
+,2.1 Food Image Specificity and Semantic Clarity ,(C10) “The image of stir-fried mixed vegetables should specifically represent stir-fried mixed vegetables served with rice.”
+,2.2 Ingredient Identification and Visual Cues ,(C11) “Use arrows to clearly indicate specific ingredients when they appear together with other items.”
+,2.3 Ingredient State Authenticity ,"(C12) “Some images should depict ingredients that have already undergone preparation or cooking, such as cooked shrimp.”"
+,2.4 Customisation Option Representation ,(C13) “Options such as ‘no MSG’ and ‘not sweet’ should be added.”
+,2.5 Language Appropriateness for Local Users ,"(C14) “Change the interface language from English to Thai, for example: Home → หน้าหลัก / Menu → รายการอาหาร.”"
+,2.6 Visual Realism of Food Images ,(C15) “Food images should be changed from illustrations to real photographs.”
+3: Interaction Design and Navigation,,
+,3.1 Navigation Structure and Layout ,(C16) “Pagination using left–right arrows across multiple pages should be changed to a single vertical layout (top to bottom).”
+,3.2 Visibility and System State ,(C17) “Pagination should be changed to a vertical layout so users can see an overview of which ingredients have already been selected.”
+,3.3 Action Discoverability and Affordance ,(C18) “The home screen should clearly indicate that users need to tap on food category images to view details.”
+,3.4 Ordering Completeness and Feedback ,(C19) “Price information should be displayed (entered by the vendor).”
+4: Audio Interaction Support,,
+,4.1 Audio Control Discoverability ,(C20) “Add a visual frame or icon around the audio button to indicate that users must press it to play the sound.”
+,4.2 Audio Playback Flexibility ,(C21) “The button should allow repeated presses in case the vendor has not yet heard the audio.”
+,4.3 Volume Control and Adjustability ,(C22) “Add volume increase/decrease buttons.”

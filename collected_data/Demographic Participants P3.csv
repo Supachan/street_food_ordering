@@ -1,0 +1,78 @@
+﻿Participant ID,Gender,Age,Deaf/HoH,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13
+1,male,23,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+2,female,27,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+3,female,26,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+4,male,26,Deaf,Disagree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+5,female,25,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+6,female,25,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+7,female,24,Deaf,Disagree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+8,male,24,Deaf,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+9,male,24,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree
+10,female,24,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+11,female,24,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+12,female,23,Deaf,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+13,male,23,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+14,female,23,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Disagree
+15,male,23,Deaf,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+16,female,23,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+17,male,23,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+18,female,23,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+19,male,23,HoH,Disagree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+20,female,23,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+21,female,23,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+22,female,23,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree
+23,female,23,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+24,female,23,Deaf,Disagree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+25,female,22,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree
+26,female,22,HoH,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+27,male,22,Deaf,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+28,female,22,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree
+29,female,22,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+30,female,22,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree
+31,female,22,Deaf,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree
+32,female,22,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+33,female,22,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree
+34,male,22,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Disagree,Agree,Agree
+35,male,22,HoH,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Disagree,Agree,Agree,Agree,Agree
+36,female,22,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+37,female,22,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+38,male,22,Deaf,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+39,female,22,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+40,female,21,Deaf,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree
+41,female,21,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+42,male,21,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+43,male,21,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+44,male,21,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+45,male,21,Deaf,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree
+46,male,21,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+47,male,21,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree
+48,female,21,Deaf,Disagree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+49,female,21,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+50,female,21,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+51,male,20,Deaf,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree
+52,female,20,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+53,female,20,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+54,female,20,HoH,Disagree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+55,female,20,Deaf,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+56,male,20,Deaf,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree
+57,female,20,Deaf,Disagree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Disagree,Agree
+58,male,20,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+59,male,19,Deaf,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree
+60,male,19,Deaf,Disagree,Agree,Disagree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree,Agree
+,,,,46,57,36,60,58,60,60,32,59,57,57,58,51
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+Note,Q1,1. Users are able to recall the name of the web application.,,,,,,,,,,,,,,
+,Q2,2. Users can conveniently access the web application via a web browser.,,,,,,,,,,,,,,
+,Q3,"3. Users are able to operate functional buttons (e.g., Home, Menu, others) effectively.",,,,,,,,,,,,,,
+,Q4,4. The web application demonstrates an appropriate arrangement of buttons on the interface.,,,,,,,,,,,,,,
+,Q5,5.  The button representing sign language is appropriately designed.,,,,,,,,,,,,,,
+,Q6,"6. On the home page, users can understand the sign language video.",,,,,,,,,,,,,,
+,Q7,"7. On the menu page (food items), users can understand the sign language videos presented 
+(e.g., Noodle, Rice dishes, Papaya salad).",,,,,,,,,,,,,,
+,Q8,8. Users are able to learn how to operate the web application.,,,,,,,,,,,,,,
+,Q9,9. The design of the web application is visually appealing and user-friendly.,,,,,,,,,,,,,,
+,Q10,10. The pre-order messages meet users’ needs.,,,,,,,,,,,,,,
+,Q11,11. Users agree with the inclusion of audio messages.,,,,,,,,,,,,,,
+,Q12,12. This web application facilitates users in ordering food more conveniently.,,,,,,,,,,,,,,
+,Q13,13. The web application contains operational errors.,,,,,,,,,,,,,,
