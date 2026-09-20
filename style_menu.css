@@ -89,6 +89,7 @@ body {
   gap: 16px;
 } */
 
+
 .menu {
   display: flex;
   justify-content: center;
@@ -113,6 +114,12 @@ body {
   display: block;
 }
 
+.menu img:hover,
+.sub-menu video:hover {
+  transform: scale(1.02);
+  transition: 0.2s ease;
+}
+
 .flex{
   display: flex;
   gap:16px;
@@ -127,7 +134,9 @@ body {
   font-size: medium;
 }
 
-
+img:active {
+  cursor: pointer;
+}
 /* .menu {
   display:flex; 
   width:100%;
