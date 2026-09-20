@@ -19,14 +19,14 @@ body {
 
   header a {
     background-color: white;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 16px;
     font-size: 2vw;
-    color: black ;
+    color: black;
     text-decoration: none;
     text-transform: uppercase;
-    margin-top: 40px;
-    max-height: 50px;
-  }
+    border-radius: 12px;   /* very round */
+    display: inline-block;
+}
   h1 {text-align: center;
     font-size: 2vw;}
   /* h2 {text-align: left;
@@ -55,6 +55,63 @@ body {
       margin-right: 20px;
     }
 }
+.menu img,
+.sub-menu video {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;   /* change to 10px, 30px, etc. */
+  border: 2px solid #ddd;
+}
+
+.sub-menu {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.item {
+  padding: 20px 16px;
+  background-color: rgb(255, 213, 255);
+  font-size: medium;
+  text-align: center;
+}
+
+.item h2 {
+  margin: 0 0 10px;
+}
+
+/* .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+} */
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;   /* space between image and video */
+  width: 100%;
+}
+
+.menu .sub-menu {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu img,
+.sub-menu video {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
 
 .flex{
   display: flex;
@@ -71,20 +128,20 @@ body {
 }
 
 
-.menu {
+/* .menu {
   display:flex; 
   width:100%;
   /* border: 5px solid rgb(32, 18, 230); */
-}
+/* } */ */
 
-.menu .sub-menu {
+/* .menu .sub-menu {
   width:50%;
   text-align: center;
   /* top:50%;
   left:50%;  */
-  display: inline-block;
+  /* display: inline-block; */
   /* border: 5px solid rgb(145, 18, 230); */
-}
+/* } */ 
 
 .menu img{
   width: 200px;

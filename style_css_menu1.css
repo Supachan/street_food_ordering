@@ -81,17 +81,15 @@ body {
       }
     
     header a {
-        background-color: rgb(255, 255, 255);
-        color: black;
-        padding: 15px;
-        font-size: 20px;
-        display: block;
-        text-decoration: none;
-        width: 150px;
-        margin-top: 10px;
-        opacity: 0.9;  
-        line-height: 20px;
-      }
+    background-color: white;
+    padding: 10px 16px;
+    font-size: 2vw;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 12px;   /* very round */
+    display: inline-block;
+    }
 
       header .mobile {
         display: none;
