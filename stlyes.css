@@ -104,10 +104,11 @@ body {
 }
 
 .method_img video{
-  max-width: 300;
-  max-height: 300;
-  width: 50%;
-  height: 50%;
+  display: block;
+  width: min(100%, 640px);
+  height: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
   border: 5px solid rgb(230, 117, 18);
 }
 
